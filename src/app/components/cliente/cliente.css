@@ -1,0 +1,221 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.cliente-container {
+  margin-left: 220px;
+  padding: 30px;
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+/* TÍTULO */
+.cliente-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3a8a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* BARRA SUPERIOR */
+.barra {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* INPUT BUSCAR */
+.barra input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.barra input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+}
+
+/* BOTÓN AGREGAR */
+.barra button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.barra button:hover {
+  background: #1e40af;
+}
+
+/* TABLA */
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ENCABEZADO */
+thead {
+  background: #2563eb;
+  color: white;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* BOTONES TABLA */
+td button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+td button:hover {
+  opacity: 0.8;
+}
+
+/* EDITAR */
+td button:first-child {
+  background: #3b82f6;
+  color: white;
+}
+
+/* ELIMINAR */
+.eliminar {
+  background: #ef4444;
+  color: white;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENIDO MODAL */
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  animation: aparecer 0.3s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* INPUTS MODAL */
+.modal-content input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+/* ACCIONES */
+.acciones {
+  margin-top: 15px;
+}
+
+.acciones button {
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* GUARDAR */
+.acciones button:first-child {
+  background: #2563eb;
+  color: white;
+}
+
+/* CANCELAR */
+.cancelar {
+  background: #9ca3af;
+  color: white;
+}
+
+/* MENÚ LATERAL */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: #1e3a8a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* LOGO / TITULO MENU */
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.logout {
+  background: #ef4444;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: #b91c1c;
+}

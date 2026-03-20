@@ -1,0 +1,89 @@
+<div class="sidebar">
+  <h2>Mi Sistema</h2>
+
+  <div class="logout" (click)="cerrarSesion()">
+    Cerrar Sesión
+  </div>
+</div>
+<div class="cliente-container">
+  <h1>Gestión de Clientes</h1>
+
+  <!-- Barra superior -->
+  <div class="barra">
+    <input
+      type="text"
+      placeholder="Buscar cliente..."
+      [(ngModel)]="filtro"
+    />
+
+    <button (click)="mostrarFormulario = true">
+      + Agregar
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" *ngIf="mostrarFormulario">
+    <div class="modal-content">
+      <h2>{{ modoEdicion ? 'Editar Cliente' : 'Nuevo Cliente' }}</h2>
+
+      <input
+        type="text"
+        placeholder="Nombre"
+        [(ngModel)]="nuevoCliente.nombre"
+      />
+
+      <input
+        type="email"
+        placeholder="Correo"
+        [(ngModel)]="nuevoCliente.correoElectronico"
+      />
+
+      <input
+        type="text"
+        placeholder="Teléfono"
+        [(ngModel)]="nuevoCliente.telefono"
+      />
+
+      <div class="acciones">
+        <!-- CORREGIDO -->
+        <button (click)="guardarCliente()">
+          {{ modoEdicion ? 'Actualizar' : 'Guardar' }}
+        </button>
+
+        <button class="cancelar" (click)="cerrarFormulario()">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabla -->
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientesFiltrados()">
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.correoElectronico }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>
+          <!-- BOTÓN EDITAR -->
+          <button (click)="editarCliente(cliente)">
+            Editar
+          </button>
+
+          <!-- ELIMINAR CORRECTO -->
+          <button class="eliminar" (click)="eliminarCliente(cliente.idCliente)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

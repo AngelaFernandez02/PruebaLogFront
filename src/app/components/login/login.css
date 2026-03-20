@@ -1,0 +1,84 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo azul sólido */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2563eb;
+}
+
+/* Tarjeta */
+.login-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 380px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+.login-card h2 {
+  margin-bottom: 25px;
+  color: #1e3a8a;
+  text-align: center;
+  font-size: 22px;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Focus */
+.input-group input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Hover */
+button:hover {
+  background: #1e40af;
+}
+
+/* Error */
+.error {
+  margin-top: 10px;
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
